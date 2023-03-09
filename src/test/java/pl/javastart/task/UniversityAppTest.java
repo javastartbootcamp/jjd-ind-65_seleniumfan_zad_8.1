@@ -124,7 +124,6 @@ class UniversityAppTest {
         assertThat(outContent.toString()).contains("Grupa pp-2022 już istnieje");
     }
 
-
     @Test
     void shouldAddStudentToGroup() {
         // given
