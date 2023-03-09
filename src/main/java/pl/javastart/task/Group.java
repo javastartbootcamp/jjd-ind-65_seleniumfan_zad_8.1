@@ -3,12 +3,12 @@ package pl.javastart.task;
 public class Group {
     private String code;
     private String name;
-    private int lecturerId;
+    private Lecturer lecturer;
 
-    public Group(String code, String name, int lecturerId) {
+    public Group(String code, String name, Lecturer lecturer) {
         this.code = code;
         this.name = name;
-        this.lecturerId = lecturerId;
+        this.lecturer = lecturer;
     }
 
     public String getCode() {
@@ -27,11 +27,19 @@ public class Group {
         this.name = name;
     }
 
-    public int getLecturer() {
-        return lecturerId;
+    public Lecturer getLecturer() {
+        return lecturer;
     }
 
-    public void setLecturer(int lecturerId) {
-        this.lecturerId = lecturerId;
+    public void setLecturer(Lecturer lecturer) {
+        this.lecturer = lecturer;
+    }
+
+    public void printInfo() {
+        System.out.println("Kod: " + code);
+        System.out.println("Nazwa: " + name);
+        System.out.println("Prowadzący: " + lecturer.getDegree() +
+                " " + lecturer.getFirstName() +
+                " " + lecturer.getLastName());
     }
 }

@@ -56,4 +56,9 @@ public class Student extends Person {
         System.out.print(index + " ");
         super.printDetails();
     }
+
+    public void printInfo() {
+        printDetails();
+        System.out.println(": " + grade);
+    }
 }
